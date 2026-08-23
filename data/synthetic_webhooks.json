@@ -1,0 +1,533 @@
+[
+  {
+    "order_id": "ord_1001",
+    "payment_id": "pay_2001",
+    "gross_paisa": 337742,
+    "mdr_paisa": 6755,
+    "gst_paisa": 1216,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1002",
+    "payment_id": "pay_2002",
+    "gross_paisa": 61255,
+    "mdr_paisa": 1225,
+    "gst_paisa": 220,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1003",
+    "payment_id": "pay_2003",
+    "gross_paisa": 173763,
+    "mdr_paisa": 3475,
+    "gst_paisa": 626,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1004",
+    "payment_id": "pay_2004",
+    "gross_paisa": 150445,
+    "mdr_paisa": 3009,
+    "gst_paisa": 542,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1005",
+    "payment_id": "pay_2005",
+    "gross_paisa": 381412,
+    "mdr_paisa": 7628,
+    "gst_paisa": 1373,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1006",
+    "payment_id": "pay_2006",
+    "gross_paisa": 354515,
+    "mdr_paisa": 7090,
+    "gst_paisa": 1276,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1007",
+    "payment_id": "pay_2007",
+    "gross_paisa": 451481,
+    "mdr_paisa": 9030,
+    "gst_paisa": 1625,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1008",
+    "payment_id": "pay_2008",
+    "gross_paisa": 89122,
+    "mdr_paisa": 1782,
+    "gst_paisa": 321,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1009",
+    "payment_id": "pay_2009",
+    "gross_paisa": 239865,
+    "mdr_paisa": 4797,
+    "gst_paisa": 863,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1010",
+    "payment_id": "pay_2010",
+    "gross_paisa": 63409,
+    "mdr_paisa": 1268,
+    "gst_paisa": 228,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1011",
+    "payment_id": "pay_2011",
+    "gross_paisa": 148387,
+    "mdr_paisa": 2968,
+    "gst_paisa": 534,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1012",
+    "payment_id": "pay_2012",
+    "gross_paisa": 277410,
+    "mdr_paisa": 5548,
+    "gst_paisa": 999,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1013",
+    "payment_id": "pay_2013",
+    "gross_paisa": 61941,
+    "mdr_paisa": 1239,
+    "gst_paisa": 223,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1014",
+    "payment_id": "pay_2014",
+    "gross_paisa": 139477,
+    "mdr_paisa": 2790,
+    "gst_paisa": 502,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1016",
+    "payment_id": "pay_2016",
+    "gross_paisa": 295224,
+    "mdr_paisa": 5904,
+    "gst_paisa": 1063,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1017",
+    "payment_id": "pay_2017",
+    "gross_paisa": 149198,
+    "mdr_paisa": 2984,
+    "gst_paisa": 537,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1018",
+    "payment_id": "pay_2018",
+    "gross_paisa": 315170,
+    "mdr_paisa": 6303,
+    "gst_paisa": 1135,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1019",
+    "payment_id": "pay_2019",
+    "gross_paisa": 414244,
+    "mdr_paisa": 8285,
+    "gst_paisa": 1491,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1020",
+    "payment_id": "pay_2020",
+    "gross_paisa": 52924,
+    "mdr_paisa": 1058,
+    "gst_paisa": 190,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1021",
+    "payment_id": "pay_2021",
+    "gross_paisa": 412619,
+    "mdr_paisa": 8252,
+    "gst_paisa": 1485,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1022",
+    "payment_id": "pay_2022",
+    "gross_paisa": 364163,
+    "mdr_paisa": 7283,
+    "gst_paisa": 1311,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1023",
+    "payment_id": "pay_2023",
+    "gross_paisa": 203113,
+    "mdr_paisa": 4062,
+    "gst_paisa": 731,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1024",
+    "payment_id": "pay_2024",
+    "gross_paisa": 119966,
+    "mdr_paisa": 2399,
+    "gst_paisa": 432,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1025",
+    "payment_id": "pay_2025",
+    "gross_paisa": 480746,
+    "mdr_paisa": 9615,
+    "gst_paisa": 1731,
+    "status": "captured",
+    "notes": "Chargeback dispute initiated on item; reserve withheld"
+  },
+  {
+    "order_id": "ord_1026",
+    "payment_id": "pay_2026",
+    "gross_paisa": 201468,
+    "mdr_paisa": 4029,
+    "gst_paisa": 725,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1027",
+    "payment_id": "pay_2027",
+    "gross_paisa": 91736,
+    "mdr_paisa": 1835,
+    "gst_paisa": 330,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1028",
+    "payment_id": "pay_2028",
+    "gross_paisa": 93522,
+    "mdr_paisa": 1870,
+    "gst_paisa": 337,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1029",
+    "payment_id": "pay_2029",
+    "gross_paisa": 431372,
+    "mdr_paisa": 8627,
+    "gst_paisa": 1553,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1030",
+    "payment_id": "pay_2030",
+    "gross_paisa": 321677,
+    "mdr_paisa": 6434,
+    "gst_paisa": 1158,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1031",
+    "payment_id": "pay_2031",
+    "gross_paisa": 413208,
+    "mdr_paisa": 8264,
+    "gst_paisa": 1488,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1032",
+    "payment_id": "pay_2032",
+    "gross_paisa": 378379,
+    "mdr_paisa": 7568,
+    "gst_paisa": 1362,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1033",
+    "payment_id": "pay_2033",
+    "gross_paisa": 291303,
+    "mdr_paisa": 5826,
+    "gst_paisa": 1049,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1034",
+    "payment_id": "pay_2034",
+    "gross_paisa": 487902,
+    "mdr_paisa": 9758,
+    "gst_paisa": 1756,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1035",
+    "payment_id": "pay_2035",
+    "gross_paisa": 220340,
+    "mdr_paisa": 4407,
+    "gst_paisa": 793,
+    "status": "captured",
+    "notes": "Transaction pending weekend bank settlement window"
+  },
+  {
+    "order_id": "ord_1036",
+    "payment_id": "pay_2036",
+    "gross_paisa": 298418,
+    "mdr_paisa": 5968,
+    "gst_paisa": 1074,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1037",
+    "payment_id": "pay_2037",
+    "gross_paisa": 423232,
+    "mdr_paisa": 8465,
+    "gst_paisa": 1524,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1038",
+    "payment_id": "pay_2038",
+    "gross_paisa": 328334,
+    "mdr_paisa": 6567,
+    "gst_paisa": 1182,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1039",
+    "payment_id": "pay_2039",
+    "gross_paisa": 437768,
+    "mdr_paisa": 8755,
+    "gst_paisa": 1576,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1040",
+    "payment_id": "pay_2040",
+    "gross_paisa": 309808,
+    "mdr_paisa": 6196,
+    "gst_paisa": 1115,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1041",
+    "payment_id": "pay_2041",
+    "gross_paisa": 367057,
+    "mdr_paisa": 7341,
+    "gst_paisa": 1321,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1042",
+    "payment_id": "pay_2042",
+    "gross_paisa": 70621,
+    "mdr_paisa": 1412,
+    "gst_paisa": 254,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1043",
+    "payment_id": "pay_2043",
+    "gross_paisa": 152554,
+    "mdr_paisa": 3051,
+    "gst_paisa": 549,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1044",
+    "payment_id": "pay_2044",
+    "gross_paisa": 180225,
+    "mdr_paisa": 3604,
+    "gst_paisa": 649,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1045",
+    "payment_id": "pay_2045",
+    "gross_paisa": 85906,
+    "mdr_paisa": 1718,
+    "gst_paisa": 309,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1046",
+    "payment_id": "pay_2046",
+    "gross_paisa": 154756,
+    "mdr_paisa": 3095,
+    "gst_paisa": 557,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1047",
+    "payment_id": "pay_2047",
+    "gross_paisa": 95451,
+    "mdr_paisa": 1909,
+    "gst_paisa": 344,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1048",
+    "payment_id": "pay_2048",
+    "gross_paisa": 175088,
+    "mdr_paisa": 3502,
+    "gst_paisa": 630,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1049",
+    "payment_id": "pay_2049",
+    "gross_paisa": 336058,
+    "mdr_paisa": 6721,
+    "gst_paisa": 1210,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1050",
+    "payment_id": "pay_2050",
+    "gross_paisa": 214174,
+    "mdr_paisa": 4283,
+    "gst_paisa": 771,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1051",
+    "payment_id": "pay_2051",
+    "gross_paisa": 216581,
+    "mdr_paisa": 4332,
+    "gst_paisa": 780,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1052",
+    "payment_id": "pay_2052",
+    "gross_paisa": 144278,
+    "mdr_paisa": 2886,
+    "gst_paisa": 519,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1053",
+    "payment_id": "pay_2053",
+    "gross_paisa": 170140,
+    "mdr_paisa": 3403,
+    "gst_paisa": 613,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1054",
+    "payment_id": "pay_2054",
+    "gross_paisa": 471495,
+    "mdr_paisa": 9430,
+    "gst_paisa": 1697,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1055",
+    "payment_id": "pay_2055",
+    "gross_paisa": 341616,
+    "mdr_paisa": 6832,
+    "gst_paisa": 1230,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1056",
+    "payment_id": "pay_2056",
+    "gross_paisa": 324109,
+    "mdr_paisa": 6482,
+    "gst_paisa": 1167,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1057",
+    "payment_id": "pay_2057",
+    "gross_paisa": 127012,
+    "mdr_paisa": 2540,
+    "gst_paisa": 457,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1058",
+    "payment_id": "pay_2058",
+    "gross_paisa": 378107,
+    "mdr_paisa": 7562,
+    "gst_paisa": 1361,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1059",
+    "payment_id": "pay_2059",
+    "gross_paisa": 123531,
+    "mdr_paisa": 2471,
+    "gst_paisa": 445,
+    "status": "captured",
+    "notes": "Standard clearance"
+  },
+  {
+    "order_id": "ord_1060",
+    "payment_id": "pay_2060",
+    "gross_paisa": 220755,
+    "mdr_paisa": 4415,
+    "gst_paisa": 795,
+    "status": "captured",
+    "notes": "Standard clearance"
+  }
+]

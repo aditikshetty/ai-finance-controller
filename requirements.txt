@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+google-genai
+pydantic
+pandas
+faker
+python-dotenv
+scikit-learn
+streamlit
