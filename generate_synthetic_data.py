@@ -1,108 +1,127 @@
 import json
+import os
 import random
-from faker import Faker
 from datetime import datetime, timedelta
+from faker import Faker
 
 fake = Faker('en_IN')
 random.seed(42)
 
-def generate_datasets(num_records=60):
+def generate_datasets(count: int = 60):
+    os.makedirs("data", exist_ok=True)
+    
     invoices = []
     webhooks = []
-    bank_lines = []
+    bank_records = []
     
-    base_time = datetime.now() - timedelta(days=5)
-
-    for i in range(1, num_records + 1):
+    base_time = datetime(2026, 8, 20, 10, 0, 0)
+    
+    for i in range(1, count + 1):
         order_id = f"ord_{1000 + i}"
         payment_id = f"pay_{2000 + i}"
-        gross_rupees = round(random.uniform(500, 5000), 2)
-        gross_paisa = int(round(gross_rupees * 100))
-        tx_time = base_time + timedelta(hours=i)
+        utr = f"UTR{random.randint(100000000000, 999999999999)}"
         
-        # 1. Invoice Record
+        # Gross amount in Paisa (INR 500 to INR 10,000)
+        gross_amount_paisa = random.randint(50000, 1000000)
+        created_time = base_time + timedelta(minutes=i * 15)
+        
+        # Standard fee: 2% MDR, 18% GST on MDR
+        mdr_fee_paisa = int(gross_amount_paisa * 0.02)
+        gst_paisa = int(mdr_fee_paisa * 0.18)
+        net_settled_paisa = gross_amount_paisa - mdr_fee_paisa - gst_paisa
+
+        # 1. Injected Anomaly: Unpaid / Abandoned Invoice
+        if i == 15:
+            invoices.append({
+                "order_id": order_id,
+                "gross_amount_paisa": gross_amount_paisa,
+                "amount_paisa": gross_amount_paisa,
+                "customer_name": fake.name(),
+                "created_at": created_time.isoformat(),
+                "status": "ISSUED"
+            })
+            continue
+
+        # 2. Injected Anomaly: Chargeback Dispute Hold (₹500 / 50,000 paisa reserve hold)
+        elif i == 25:
+            invoices.append({
+                "order_id": order_id,
+                "gross_amount_paisa": gross_amount_paisa,
+                "amount_paisa": gross_amount_paisa,
+                "customer_name": fake.name(),
+                "created_at": created_time.isoformat(),
+                "status": "ISSUED"
+            })
+            webhooks.append({
+                "order_id": order_id,
+                "payment_id": payment_id,
+                "amount_paisa": gross_amount_paisa,
+                "payment_method": "credit_card",
+                "captured_at": (created_time + timedelta(minutes=2)).isoformat(),
+                "status": "captured"
+            })
+            bank_records.append({
+                "order_id": order_id,
+                "payment_id": payment_id,
+                "utr": utr,
+                "credit_paisa": net_settled_paisa - 50000,
+                "settled_at": (created_time + timedelta(hours=24)).isoformat(),
+                "status": "SETTLED"
+            })
+            continue
+
+        # 3. Injected Anomaly: T+2 Banking Settlement Delay
+        elif i == 35:
+            invoices.append({
+                "order_id": order_id,
+                "gross_amount_paisa": gross_amount_paisa,
+                "amount_paisa": gross_amount_paisa,
+                "customer_name": fake.name(),
+                "created_at": created_time.isoformat(),
+                "status": "ISSUED"
+            })
+            webhooks.append({
+                "order_id": order_id,
+                "payment_id": payment_id,
+                "amount_paisa": gross_amount_paisa,
+                "payment_method": "netbanking",
+                "captured_at": (created_time + timedelta(minutes=2)).isoformat(),
+                "status": "captured"
+            })
+            continue
+
+        # Standard Clean Matching Records
         invoices.append({
             "order_id": order_id,
+            "gross_amount_paisa": gross_amount_paisa,
+            "amount_paisa": gross_amount_paisa,
             "customer_name": fake.name(),
-            "gross_amount_paisa": gross_paisa,
-            "created_at": tx_time.isoformat()
+            "created_at": created_time.isoformat(),
+            "status": "ISSUED"
         })
-        
-        # Intentional Anomaly Injections for Hackathon Benchmark
-        if i == 15:
-            # Case 1: Unpaid Abandoned Order (Invoice exists, no webhook, no bank credit)
-            continue
-        elif i == 25:
-            # Case 2: Chargeback dispute (₹500 / 50000 paisa reserve deduction)
-            mdr_paisa = int(round(gross_paisa * 0.02))
-            gst_paisa = int(round(mdr_paisa * 0.18))
-            hold_paisa = 50000
-            net_paisa = gross_paisa - mdr_paisa - gst_paisa - hold_paisa
-            
-            webhooks.append({
-                "order_id": order_id,
-                "payment_id": payment_id,
-                "gross_paisa": gross_paisa,
-                "mdr_paisa": mdr_paisa,
-                "gst_paisa": gst_paisa,
-                "status": "captured",
-                "notes": "Chargeback dispute initiated on item; reserve withheld"
-            })
-            bank_lines.append({
-                "utr": f"UTR_ICICI_{5000 + i}",
-                "payment_id": payment_id,
-                "order_id": order_id,
-                "credit_paisa": net_paisa,
-                "settled_at": (tx_time + timedelta(days=1)).isoformat()
-            })
-        elif i == 35:
-            # Case 3: T+2 Weekend Settlement Delay (Webhook exists, Bank credit pending)
-            mdr_paisa = int(round(gross_paisa * 0.02))
-            gst_paisa = int(round(mdr_paisa * 0.18))
-            webhooks.append({
-                "order_id": order_id,
-                "payment_id": payment_id,
-                "gross_paisa": gross_paisa,
-                "mdr_paisa": mdr_paisa,
-                "gst_paisa": gst_paisa,
-                "status": "captured",
-                "notes": "Transaction pending weekend bank settlement window"
-            })
-        else:
-            # Standard Clean Transaction: Gross - 2% MDR - 18% GST
-            mdr_paisa = int(round(gross_paisa * 0.02))
-            gst_paisa = int(round(mdr_paisa * 0.18))
-            net_paisa = gross_paisa - mdr_paisa - gst_paisa
-            
-            webhooks.append({
-                "order_id": order_id,
-                "payment_id": payment_id,
-                "gross_paisa": gross_paisa,
-                "mdr_paisa": mdr_paisa,
-                "gst_paisa": gst_paisa,
-                "status": "captured",
-                "notes": "Standard clearance"
-            })
-            bank_lines.append({
-                "utr": f"UTR_ICICI_{5000 + i}",
-                "payment_id": payment_id,
-                "order_id": order_id,
-                "credit_paisa": net_paisa,
-                "settled_at": (tx_time + timedelta(days=1)).isoformat()
-            })
+        webhooks.append({
+            "order_id": order_id,
+            "payment_id": payment_id,
+            "amount_paisa": gross_amount_paisa,
+            "payment_method": "upi",
+            "captured_at": (created_time + timedelta(minutes=2)).isoformat(),
+            "status": "captured"
+        })
+        bank_records.append({
+            "order_id": order_id,
+            "payment_id": payment_id,
+            "utr": utr,
+            "credit_paisa": net_settled_paisa,
+            "settled_at": (created_time + timedelta(hours=12)).isoformat(),
+            "status": "SETTLED"
+        })
 
-    # Write files to the data/ directory
     with open("data/synthetic_invoices.json", "w") as f:
         json.dump(invoices, f, indent=2)
     with open("data/synthetic_webhooks.json", "w") as f:
         json.dump(webhooks, f, indent=2)
     with open("data/synthetic_bank.json", "w") as f:
-        json.dump(bank_lines, f, indent=2)
-        
-    print(f" Successfully generated:")
-    print(f" - data/synthetic_invoices.json ({len(invoices)} records)")
-    print(f" - data/synthetic_webhooks.json ({len(webhooks)} records)")
-    print(f" - data/synthetic_bank.json ({len(bank_lines)} records)")
+        json.dump(bank_records, f, indent=2)
 
 if __name__ == "__main__":
     generate_datasets(60)
