@@ -87,7 +87,6 @@ Outputting a risk probability metric:
 
 ---
 
-
 ## 6. Quickstart & Installation
 
 ### 1. Prerequisites
