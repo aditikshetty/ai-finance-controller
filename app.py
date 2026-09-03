@@ -10,7 +10,7 @@ import altair as alt
 FASTAPI_BASE_URL = "http://127.0.0.1:8000"
 
 st.set_page_config(
-    page_title="FinControl AI | Autonomous Finance Controller",
+    page_title="FinControl AI ",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -201,7 +201,7 @@ with header_col1:
     st.markdown("""
     <div style="padding: 4px 0;">
         <div class="brand-title">FinControl AI — Autonomous Finance Controller</div>
-        <div class="brand-sub">Razorpay Track 04: Hybrid Waterfall Core + ML Risk Scoring + Autonomous LLM Auditor</div>
+        <div class="brand-sub"></div>
     </div>
     """, unsafe_allow_html=True)
 
