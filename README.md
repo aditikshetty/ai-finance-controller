@@ -87,28 +87,6 @@ Outputting a risk probability metric:
 
 ---
 
-## 5. Repository Structure
-
-ai-finance-controller/
-├── data/
-│   ├── synthetic_invoices.json      # ERP invoice records
-│   ├── synthetic_webhooks.json      # Gateway webhook payloads
-│   └── synthetic_bank.json          # Bank settlement credit feeds
-├── agent_tools.py                   # External dispute & bank clearing mock microservices
-├── anomaly_ml_model.py              # Scikit-learn predictive loss risk classifier
-├── api.py                           # FastAPI REST endpoints & Copilot bridge
-├── app.py                           # Single-view Cashly-inspired Streamlit dashboard
-├── benchmark_stress.py              # High-volume (500 Tx) performance benchmarking tool
-├── bundle_fincontrol.py             # Consolidated all-in-one single-file engine
-├── docker-compose.yml               # Multi-service container orchestration
-├── Dockerfile                       # Multi-stage container build file
-├── fee_engine.py                    # Integer-Paisa deterministic fee calculation engine
-├── generate_synthetic_data.py       # Deterministic transaction generator with injected anomalies
-├── llm_auditor.py                   # Tool-calling Gemini 3.6 Flash exception auditor
-├── reconciler.py                    # 2-Tier deterministic waterfall reconciliation engine
-├── run_pipeline.py                  # CLI pipeline benchmark runner
-└── requirements.txt                 # Python dependencies
----
 
 ## 6. Quickstart & Installation
 
